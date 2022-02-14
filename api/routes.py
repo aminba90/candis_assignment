@@ -6,6 +6,7 @@ from flask_restful import Api
 
 from api.invoice import InvoicesApi, InvoiceApi
 from api.contact import ContactsApi, ContactApi
+from api.calcConf import calcConfApi
 
 
 
@@ -26,4 +27,5 @@ def create_routes(api: Api):
     api.add_resource(InvoiceApi, '/invoice/<id>')
     api.add_resource(ContactsApi, '/contact/')
     api.add_resource(ContactApi, '/contact/<id>')
+    api.add_resource(calcConfApi, '/conf/')
   #  api.add_resource(MealApi, '/meal/<meal_id>')

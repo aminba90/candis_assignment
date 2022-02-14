@@ -1,7 +1,6 @@
 # mongo-engine packages
 from mongoengine import Document, StringField, FloatField, DateField, EmbeddedDocumentField, EmbeddedDocument, ListField, ReferenceField
 
-from models.contacts import Contact
 
 class Amount(EmbeddedDocument):
 
@@ -38,6 +37,6 @@ class Invoices(Document):
     createdAt = DateField()
     updatedAt = DateField()
     amount= EmbeddedDocumentField(Amount)
-    contact= ListField(ReferenceField(Contact))
+    contact_id= StringField()
     invoiceDate= DateField()
     invoiceId= StringField()

@@ -12,13 +12,14 @@ class InvoicesApi(Resource):
 
     def post(self) -> Response:
           data = request.get_json()
-          contact_id=data['contact_id']
-          dbobj = Contact.objects(_id=str(contact_id)).first()
-          del data["contact_id"]
-          data['contact'] = list(dbobj)
+          contact_obj=data['contact']
+          contact_id=contact_obj['_id']
+          del data["contact"]
+          data['contact_id']=contact_id
           post_user = Invoices(**data).save()
-          return jsonify(data)
-
+          post_contact= Contact(**contact_obj).save()
+          return jsonify(post_user,post_contact)
+          
 class InvoiceApi(Resource):
     
     def get(self, id: str) -> Response:
