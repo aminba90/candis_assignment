@@ -17,8 +17,14 @@ class InvoicesApi(Resource):
           del data["contact"]
           data['contact_id']=contact_id
           post_user = Invoices(**data).save()
-          post_contact= Contact(**contact_obj).save()
-          return jsonify(post_user,post_contact)
+          contact_exist= Contact.objects(_id=contact_id)
+          if len(contact_exist)<1:
+              post_contact= Contact(**contact_obj).save()
+              return jsonify(post_user,post_contact)
+          else:
+              print("Contact Already Existed")
+              return jsonify(post_user,contact_exist)
+          
           
 class InvoiceApi(Resource):
     
