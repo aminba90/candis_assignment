@@ -1,6 +1,4 @@
 # flask packages
-import json
-from operator import contains
 from flask import jsonify, Response, request
 from flask_restful import Resource
 from models.contacts import Contact

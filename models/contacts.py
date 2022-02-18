@@ -1,6 +1,5 @@
 # mongo-engine packages
-from pydoc import Doc
-from mongoengine import Document, StringField, EmbeddedDocument
+from mongoengine import Document, StringField
 
 
 class Contact(Document):

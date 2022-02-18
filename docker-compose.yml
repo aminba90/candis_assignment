@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  web:
+    container_name: candis-webapi
+    build: .
+    ports:
+      - 5000:5000
+    depends_on:
+      - mongodb
+    environment:
+      - ENV=Development
+    volumes:
+      - .:/candis_webapi
+  mongodb:
+    image: mongo
+    container_name: candis-mongodb
+    hostname: localhost
+    ports:
+      - 27017:27017
+    volumes:
+      - db-data:/data/db
+
+volumes:
+  db-data:
