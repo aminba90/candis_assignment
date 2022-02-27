@@ -13,7 +13,7 @@ import os
 # default mongodb configuration
 default_config = {'MONGODB_SETTINGS': {
                     'db': 'candis_db',
-                    'host': 'localhost',                
+                    'host': 'candis-mongodb',                
                     'port': 27017
                    }}
 

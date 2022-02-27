@@ -7,6 +7,9 @@ services:
       - 5000:5000
     depends_on:
       - mongodb
+    networks:
+      - frontend
+      - backend
     environment:
       - ENV=Development
     volumes:
@@ -14,11 +17,14 @@ services:
   mongodb:
     image: mongo
     container_name: candis-mongodb
-    hostname: localhost
     ports:
       - 27017:27017
     volumes:
-      - db-data:/data/db
-
-volumes:
-  db-data:
+      - .:/data/db
+    networks:
+      - backend
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge

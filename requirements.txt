@@ -7,3 +7,5 @@ Werkzeug==1.0.1
 WTForms==2.2.1
 Levenshtein==0.18.1
 numpy==1.18.5
+itsdangerous==2.0.1
+pymongo==3.12.1
