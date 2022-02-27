@@ -25,3 +25,5 @@ as requested in the assignment, an endpoint for Indicating an abnormal amount fo
 
 TEST CASE:
 To do the unit test on our Restful methods, a class called “API_TEST”  in /test/api_test.py has been created. There are multiple functions that each of them will do a unit test on our developed endpoints.
+
+***END
