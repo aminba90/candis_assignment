@@ -1,4 +1,4 @@
-*** This project was developed as a task which was assigned to me in order to assess my programming knowledge. In this task I was supposed to develop a Restful API to write JSON documents into a MongoDB and also develop 2 other services to do some specific calculations***
+*** This project was developed as a task which was assigned to me in order to assess my programming knowledge. In this task I was supposed to develop a Restful API to write JSON documents into a MongoDB and also develop 2 other services to do some specific calculations. you can read more detail of the task in the pdf file which is provided***
 
 
 
