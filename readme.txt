@@ -1,3 +1,8 @@
+*** This project was developed as a task which was assigned to me in order to assess my programming knowledge. In this task I was supposed to develop a Restful API to write JSON documents into a MongoDB and also develop 2 other services to do some specific calculations***
+
+
+
+
 ***Follow this instruction to install and run Restful service for my take-home assignment***
 
 Prerequisites:
